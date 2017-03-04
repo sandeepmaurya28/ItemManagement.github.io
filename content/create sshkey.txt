@@ -1,0 +1,33 @@
+1. create ssh key using the following command(this step is already done) : 
+    ssh-keygen -t rsa
+Your keys will be created at ~/.ssh/id_rsa.pub(important) and ~/.ssh/id_rsa
+2. modify the key if ip address of deploy server is changed
+3. ssh into new server from putty and run following command
+   vim ~/.ssh/authorized_keys
+paste key from step 1
+4. ssh into deploy server from putty and run the following command
+   cd /var/www/scripts
+   ls 
+   copy contents of any one file and paste it to a newly created file and modify 
+   server address in new file to newly created server ip
+
+5. ssh into new server from deploy server manually (sudo su ,su jenkins)
+   ssh ubuntu@x.x.x.x 
+  type yes when prompted
+6. now login into jenkins url:http://35.154.39.209:8080/ with credentials provided
+    now click on "DeployToTest" option  
+    after that click on "configure" option present on left side 
+    then scroll down the page till the "Build" option
+    write the newly created file name under "Execute shell"->Command 
+    then Save the changes 
+    
+7. to verify the changes made by you :
+   go to option "Build Now" present on left side 
+   if icons present in Build History is blue then it is successful 
+
+8. If public ip of Deploy Server changes then do the following step:
+    8.a. log in into bitbucket account using punit's credentials 
+    8.b. go to easyecom ->settings->webhooks
+    8.c. change the ip address of jenkins_webhook
+    8.4. go to services option and edit the ip address of jenkins 
+   
