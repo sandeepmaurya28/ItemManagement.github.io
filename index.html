@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +15,7 @@
         color: #105693;
     }
     p:hover{
-       color: #122b40;
-
-
+        color: #122b40;
     }
     hr{
         margin: 12px;
@@ -68,17 +64,13 @@
         font-size: 13px;
         font-weight: 500;
     }
-
-
     ::-webkit-scrollbar {
         width: 8px;
     }
-
     ::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px #9d9d9d;
         border-radius: 6px;
     }
-
     ::-webkit-scrollbar-thumb {
         border-radius: 6px;
         -webkit-box-shadow: inset 0 0 6px #9d9d9d;
@@ -86,7 +78,6 @@
     h4{
         font-size: 17px;
         font-family: sans-serif;
-
     }
     h5{
         font-size: 16px;
@@ -97,7 +88,9 @@
         font-weight: 600;
     }
 </style>
+<!--Error Box-->
 <div class="alert-danger col-sm-10 text-center" hidden id="error" style="position: fixed;top: 2%;left:30%;width: 54%; ">erroror</div>
+<!--First Form For User Info-->
 <div id ="form1"       class="container">
     <div class="row col-xs-12 col-sm-offset-1 col-sm-10 ">
         <h4>Customer Details </h4>
@@ -159,7 +152,8 @@
     </div>
 </div>
 </div>
-<div id="form2" hidden   class="container" style="position: relative; z-index: 0;">
+<!--Second Form for Item Addition -->
+<div id="form2"  hidden   class="container" style="position: relative; z-index: 0;">
     <div class="row col-xs-12 col-sm-offset-1 col-sm-10 ">
         <h4>Add items to the Quotation</h4>
         <hr>
@@ -227,62 +221,54 @@
                 </thead>
                 <tbody  id="ItemList" >
                 </tbody>
-
             </table>
-
-           <div class="col-xs-12" >
-               <h4 class="text-center">Add Custom Values</h4>
-               <hr>
-               <div class="col-sm-5 text-right">
-                   <p>Add a Custom Total</p>
-                   <p id="CustomValue">Add a Custom Value</p>
-                   <p>Add an Offer</p>
-                   <p>Add a Details</p>
-                   <p>Add Suject</p>
-               </div>
-               <div class="col-sm-7" style="border: 1px solid #2e78a4;min-height: 115px;max-height: 115px; padding: 0px;border-radius: 4px;">
-                   <table class="table table-bordered">
-                       <tbody id="">
-                       <tr >
-                           <td class="highlight">Grand Total :</td>
-                           <td id="grandTotal" data-value="0">0</td>
-                           <td class="unit">INR</td>
-                           <td><span class="glyphicon glyphicon-pencil pencil" ></span></td>
-                           <td><span class="glyphicon glyphicon-remove remove" ></span></td>
-                       </tr>
-                       <tr >
-                           <td class="highlight">Total :</td>
-                           <td id="finalTotal" data-value="0">0</td>
-                           <td class="unit">INR</td>
-                           <td><span class="glyphicon glyphicon-pencil pencil" ></span></td>
-                           <td> <span class="glyphicon glyphicon-remove remove" ></span></td>
-                       </tr>
-                       </tbody>
-                   </table>
-               </div>
-               <p class="text-center">INR FiveThousands only</p>
-           </div>
+            <div class="col-xs-12" >
+                <h4 class="text-center">Add Custom Values</h4>
+                <hr>
+                <div class="col-sm-5 text-right">
+                    <p>Add a Custom Total</p>
+                    <p id="CustomValue">Add a Custom Value</p>
+                    <p>Add an Offer</p>
+                    <p>Add a Details</p>
+                    <p>Add Suject</p>
+                </div>
+                <div class="col-sm-7" style="border: 1px solid #2e78a4;min-height: 115px;max-height: 115px; padding: 0px;border-radius: 4px;">
+                    <table class="table table-bordered">
+                        <tbody id="">
+                        <tr >
+                            <td class="highlight">Grand Total :</td>
+                            <td id="grandTotal" data-value="0">0</td>
+                            <td class="unit">INR</td>
+                            <td><span class="glyphicon glyphicon-pencil pencil" ></span></td>
+                            <td><span class="glyphicon glyphicon-remove remove" ></span></td>
+                        </tr>
+                        <tr >
+                            <td class="highlight">Total :</td>
+                            <td id="finalTotal" data-value="0">0</td>
+                            <td class="unit">INR</td>
+                            <td><span class="glyphicon glyphicon-pencil pencil" ></span></td>
+                            <td> <span class="glyphicon glyphicon-remove remove" ></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<p class="text-center">INR FiveThousands only</p>-->
+            </div>
         </div>
-
     </div>
     <div class="row col-xs-12 col-sm-offset-1 col-sm-10">
         <hr>
         <button class="btn btn-primary btn-sm pull-right" style="margin-right: 17%;" id="form2Save">Next</button>
     </div>
-
 </div>
+<!--Third Form for Final Page of Quotation-->
 <div id="form3"  hidden class="container">
     <div class="row col-xs-12 col-sm-offset-2 col-sm-10 " id="Scroll" style="max-height: 500px;overflow-x: hidden;overflow-y: auto;">
         <div class="col-xs-12 text-left" style="padding: 2%;border:1px solid #eee;" id="form3body">
-
-               <p style="font-size: 16px;color: #464040;"> Limestem Global services private limited</p>
-               <span>SF-31, 2nd Floor,
-               </span> <br>
-               <span> Omaxe Celebration Mall,
-                   Sector 48,
-               </span> <br>
-               <span> Gurgaon (Haryana),India</span>
-
+            <p style="font-size: 16px;color: #464040;"> Limestem Global services private limited</p>
+            <span>SF-31, 2nd Floor,</span> <br>
+            <span> Omaxe Celebration Mall,Sector 48,</span> <br>
+            <span> Gurgaon (Haryana),India</span>
             <h4 class="text-center" style="font-family: serif;font-size: 30px;">Quotation</h4>
             <hr>
             <div class="col-xs-12">
@@ -310,14 +296,14 @@
             </table>
         </div>
     </div>
-
     <div class="pull-right" style="margin-top: 10px;">
-        <button class="btn btn-primary">Back</button>
+        <button class="btn btn-primary" id="back">Back</button>
         <button class="btn btn-primary">Save & Open</button>
         <button class="btn btn-primary">Save & Email</button>
         <button class="btn btn-primary">Cancel</button>
     </div>
 </div>
+<!--Modal Box -->
 <div id="CustomValueModal" >
     <p>Add Custom Summery Value</p>
     <hr>
@@ -337,212 +323,9 @@
         <button class="btn btn-danger" id="Cancel" >Cancel</button>
     </div>
 </div>
+<!--Script Js-->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/toWords.js"></script>
-<script>
-    $(document).ready(function () {
-        var Customer={};
-        var ItemNumber=0;
-        var ItemKey=new Array();
-
-        $("#CustomValue").on("click",function () {
-            $("input[type=checkbox]:checked").val();
-
-            if(!$("input[type=checkbox]:checked").val()){
-                ShowError("Select Item To Update Custom Value");
-                return false;
-            }
-            $("#CustomValueModal").toggle();
-
-
-        });
-        $("#Cancel").on("click",function () {
-            $("#CustomValueModal").hide();
-        });
-        function ShowError(error) {
-            $("#error").html(error).show().fadeOut(3000);
-
-        }
-        $("#Form1Save").on("click",function () {
-
-            var name=$("#CustomerName").val();
-            var Address=$("#address").val();
-            var AddressTo=$("#AddressTo").val();
-            var profile=$("#profile option:selected").val();
-            if(name==null || name == ""){
-                ShowError("Enter Name");
-                $("#CustomerName").focus();
-                return false;
-            }
-            if(Address==null || Address == ""){
-                ShowError("Enter Address");
-                $("#address").focus();
-                return false;
-            }if(AddressTo==null || AddressTo == ""){
-                ShowError("Enter Address To");
-                $("#AddressTo").focus();
-                return false;
-            }
-            if(profile==null || profile == "" || profile == 0){
-                ShowError("Select Profile");
-                $("#profile").focus();
-                return false;
-            }
-            Customer.name=name;
-            Customer.Address=Address;
-            Customer.AddressTo=AddressTo;
-            Customer.Profile=profile;
-            localStorage.setItem("Customer",JSON.stringify(Customer));
-            $("#form1").hide();
-            $("#form2").show();
-        });
-        $("body").on("blur","#qty,#price",function () {
-
-            var qty=$("#qty").val();
-            if(qty==undefined || !$.isNumeric(qty))qty=0;
-
-
-            var price=$("#price").val();
-            if(price==undefined || !$.isNumeric(price))price=0;
-            var updatetotal=parseInt(qty)*parseInt(price);
-            $("#total").text(updatetotal);
-            $("#total").prop("value",updatetotal);
-        });
-        $("#Item").on("click",function () {
-            var category=$("#Category option:selected").val();
-            var itemName=$("#ItemName option:selected").val();
-            var itemCode=$("#itemCode").val();
-            var qty=$("#qty").val();
-            var price=$("#price").val();
-            var unit=$("#unit option:selected").val();
-
-            var total=$("#total").val();
-
-            if(itemCode==null || itemCode==""){
-                ShowError("Enter Item Code");
-                return false;
-            } else if(qty==null || qty==""){
-                ShowError("Enter Qty");
-                return false;
-            } else if(price==null || price == "" || !$.isNumeric(price)){
-                ShowError("Enter Price ");
-                return false;
-            }
-            AddNewItem(itemName,itemCode,qty,price,total,unit,category);
-            UpdateGrand(total);
-
-
-        });
-        function AddNewItem(itemName,itemCode,qty,price,total,unit,category) {
-
-            var key=itemCode+itemName;
-            var table="<tr id='"+key+"' data-key='"+ItemNumber+"' >";
-
-            table+="<td>"+(ItemNumber+1)+"&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' value='"+ItemNumber+"'></td>";
-            table+="<td>"+itemName+"</td>";
-            table+="<td>"+itemCode+"</td>";
-            table+="<td>"+qty+"</td>";
-            table+="<td>"+price+"</td>";
-            table+="<td>"+total+"</td>";
-            table+="<td><span class='glyphicon glyphicon-pencil pencil' ></span></td>";
-            table+="<td><span  class='glyphicon glyphicon-remove remove'></span></td>";
-            table+="</tr>";
-            ItemNumber++;
-            ItemKey.push({category:category,itemName:itemName,code:itemCode,qty:qty,price:price,unit:unit,total:total,tax:0,taxName:"tax"});
-            $("#ItemList").append(table);
-        }
-
-        function UpdateTotal() {
-
-        }
-
-        function UpdateGrand(total) {
-
-            var updategrand=$("#grandTotal");
-            var grand= parseInt(updategrand.data("value"));
-            if(grand==undefined)grand=0;
-            grand+=parseInt(total);
-            updategrand.text(grand);
-            updategrand.data("value",grand);
-            $("#finalTotal").data("value",grand);
-            $("#finalTotal").text(grand);
-
-        }
-
-
-        $("#AddValue").on("click",function () {
-            var selected=$("input[type=radio]:checked").val();
-            var custom=$("#Custom").val();
-            var inputRate=$("#inputRate").val();
-            if(selected==undefined){
-                $("input[type=radio]").focus();
-
-            } else if(inputRate==undefined || inputRate==null || inputRate==""){
-                $("input[id=inputRate]").focus();
-            } else if(custom==undefined || custom==null || custom==""){
-                $("input[id=Custom]").focus();
-            } else{
-                if(parseInt(selected)==0){
-                    inputRate=parseInt(inputRate);
-                    var updategrand=$("#grandTotal");
-                    var grand=  parseInt(updategrand.data("value"));
-                    inputRate=inputRate*grand/100;
-                    inputRate=parseInt(inputRate);
-                    AddCustomValue(inputRate,custom);
-                }else if(parseInt(selected)==1){
-                    inputRate=parseInt(inputRate);
-                    AddCustomValue(inputRate,custom);
-                }
-                $("#CustomValueModal").hide();
-
-            }
-        });
-
-        function  AddCustomValue(total,custom) {
-            var updategrand=$("#grandTotal");
-            var grand= parseInt(updategrand.data("value"));
-            if(grand==undefined)grand=0;
-            grand+=parseInt(total);
-            updategrand.text(grand);
-            updategrand.data("value",grand);
-            var key=parseInt($("input[type=checkbox]:checked").val());
-            ItemKey[key].tax=parseInt(total);
-            ItemKey[key].taxName= custom;
-
-
-        }
-        $("#form2Save").on("click",function () {
-            $("#form2").hide();
-            $("#form3").show();
-            var to="<address>"+Customer.AddressTo+"<br>"+Customer.name+"<br>"+Customer.Address+"</address>";
-
-            $("#addressTo").html(to);
-            var date=new Date();
-             var d= " "+date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
-            $("#date").html(d);
-            ListItem();
-        });
-        function ListItem() {
-            $.each(ItemKey,function (k,v) {
-                var key= ++k;
-                var table="<tr><td>"+key+"</td>";
-                table+="<td>"+v.code+"</td>";
-                table+="<td>Total :"+v.total+"<br>"+v.taxName+" :"+v.tax+"</td>";
-                table+="<td>"+v.qty+"</td>";
-                table+="<td>"+v.price+"</td>";
-                table+="<td>"+(parseInt(v.total)+parseInt(v.tax))+"</td>";
-
-                table+="</tr>";
-
-                $("#finalItemList").append(table);
-            }) ;
-
-
-
-
-        }
-    });
-</script>
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -8,7 +8,6 @@
 
 if(isset($_POST) && isset($_FILES)){
 
-
     $data=array();
     $data["Name"]=$_POST["Name"];
     $data["Email"]=$_POST["Email"];
@@ -18,13 +17,11 @@ if(isset($_POST) && isset($_FILES)){
     }
     else {
         $data['file']=$_FILES['Resume']['name'];
+        // storing file in content dir
         move_uploaded_file($_FILES['Resume']['tmp_name'], 'content/' . $_FILES['Resume']['name']);
         $data['file']=$_FILES["Resume"]['name'];
+        echo json_encode($data);
     }
-
-   echo json_encode($data);
-
-
 
 } else{
     echo 404;
