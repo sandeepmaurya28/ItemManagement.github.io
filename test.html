@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+<style>
+
+</style>
+
+<script>
+    $(function () {
+
+         var getData=function () {
+             alert();
+             $.ajax({
+                 data:{
+                     isDestHoliday:true,
+                     selectedTabName: "",
+                     depCity:"Mumbai",
+                     fromSearchWidget:true,
+                     destAliasType:true,
+                    searchDep:"Bangalore Getaways",
+             IKnowDep:"Mumbai",
+             dateType:"All Dates" ,
+             dateSearched:"All Dates" ,
+             dateFlexibleBy: "",
+
+                     flexible:false ,
+             fromBreadCrump:true ,
+             searchFilterFlag:true,
+             dest:"Bangalore Getaways",
+             intid:"searchwidget_landing_Bangalore Getaways_notheme"
+                 },
+                  url:"https://holidayz.makemytrip.com/holidays/india/search",
+                 type:"GET",
+                 success:function (data) {
+                    console.log(data);
+                 }
+             });
+         }
+         getData();
+    }());
+</script>
+</body>
+</html>
